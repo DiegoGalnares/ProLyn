@@ -1,3 +1,3 @@
 #!/bin/bash
-
-echo "La fecha actual es: ";command date +%d-%B-%Y
+DIA=`date +"%d/%m/%Y"
+echo "La fecha actual es: $DIA"
