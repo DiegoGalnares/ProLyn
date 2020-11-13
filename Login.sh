@@ -1,8 +1,9 @@
 #!/bin/bash
-
+trap ' '2 
 read -p "Usuario: " usuario
+trap ' '2
 read -p "Contraseña: " contrasena
-
+trap ' '2
 #Buscando usuario y contraseña en /etc/shadow
 hpass=`sudo -S grep -r $usuario /etc/shadow`
 
@@ -13,7 +14,7 @@ hpass=`sudo -S grep -r $usuario /etc/shadow`
         hash=`python -c 'import crypt; import sys; print crypt.crypt( sys.argv[1] , sys.argv[2])' $contrasena $prefix`
 
         match=`echo "$hpass" | grep -c "$hash"`
-        exec 2> myerror
+       # exec 2> myerror
     fi
 
     if [ "$match" -eq 1 ]; then
@@ -24,14 +25,17 @@ hpass=`sudo -S grep -r $usuario /etc/shadow`
         echo -e "USUARIO Y CONTRASEÑA INCORRECTOS" 
         exit
     fi
-
+RED="\033[0;31m"
+blue="\033[0;34m"
+white="\033[1;37m"
 #Si el usuario y contraseña fueron válidos, entramos a bash
 #Aqui va una portada
 #echo "escribe "ayuda" para desplegar menu: "
 
 while [ $salir -eq 0 ];
 do
-    printf "\n$PWD@$usuario@proLyn$~\t" 
+    trap ' '2 20
+    printf "${RED}\n$PWD@$usuario${blue}@proLyn$~${white}\t" 
     read command
 
     case $command in
