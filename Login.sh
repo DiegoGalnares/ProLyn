@@ -52,6 +52,21 @@ do
 	'infosis')
 	bash infosis.sh
 	;;
+    'ppt')
+	bash juego2.sh
+	;;
+    'ahorcado')
+	bash ahorcado.sh
+	;;
+    'hora')
+	bash hora.sh
+	;;
+    'prebeplayer')
+	bash reproductor.sh
+	;;
+    'creditos')
+	bash creditos.sh
+	;;
 	'salir')
 	exit
 	;;
