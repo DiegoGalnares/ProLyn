@@ -28,7 +28,7 @@ echo -e "|\e[1;37mcreditos           \e[1;33m|\e[1;37m Muestra los creditos de l
 echo -e "|                   | \e[1;37mprograma que se esta utilizando en este\e[1;33m|"
 echo -e "|                   | \e[1;37mmomento                                \e[1;33m|"
 echo -e "|-------------------|----------------------------------------|"
-echo -e "|\e[1;37mahorcado           \e[1;33m| \e[1;37mAbrira el juego ahorcado               \e[1;33m|"
+echo -e "|\e[1;37mahorcado         \e[1;33m| \e[1;37mAbrira el juego ahorcado               \e[1;33m|"
 echo -e "|-------------------|----------------------------------------|"
 echo -e "|\e[1;37mppt                \e[1;33m|\e[1;37m Abrira el piedra, papel o tijeras        \e[1;33m|"
 echo -e "|-------------------|----------------------------------------|"
