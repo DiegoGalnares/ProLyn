@@ -35,7 +35,7 @@ white="\033[1;37m"
 while [ $salir -eq 0 ];
 do
     trap ' '2 20
-    printf "${RED}\n$PWD@$usuario${blue}@proLyn$~${white}\t" 
+    printf "${RED}\n$PWD@$usuario${blue}@proLyn$~${white}" 
     read command
 
     case $command in
